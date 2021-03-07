@@ -34,48 +34,48 @@
 
     <section class="selection">
       <div class="selection__content">
-        <h2 class="subtitle">Obtén todos los datos de tu Pokemon favorito</h2>
-        <select class="select mt-4 px-4" id="select-poke">
-          <option value="0">Selecciona un Pokemon</option>
+        <h2 class="subtitle">Gotta Catch 'Em All!</h2>
+        <select class="select mt-4 px-4" id="pokeSelect">
+          <option value="0">Choose a Pokemon</option>
         </select>
       </div>
     </section>
 
     <main class="pokedex" style="border: red 1px solid;">
-      <h1 id="poke-title" class="pokedex__title">Vista del Pokemon</h1>
+      <h1 id="pokeTitle" class="pokedex__title">Pokemon</h1>
       <section class="pokedex__info">
         <div class="pokedex__info-card box-shadow">
-          <h3>Datos del Pokemon</h3>
+          <h3>Pokemon Info</h3>
           <div class="underline"></div>
           <div class="datos row">
-            <p class="col-6">Pokedex: <span></span></p>
-            <p class="col-6">Tipo: <span></span></p>
-            <p class="col-6">Habilidad: <span></span></p>
-            <p class="col-6">Movimiento: <span></span></p>
+            <p class="col-6">Pokedex: <span id="pokeID"></span></p>
+            <p class="col-6">Type: <span id="pokeType"></span></p>
+            <p class="col-6">Ability: <span id="pokeSkills"></span></p>
+            <p class="col-6">Move: <span id="pokeMoves"></span></p>
           </div>
         </div>
         <div class="pokedex__info-card box-shadow">
-          <h3>Estadísticas</h3>
+          <h3>Statistics</h3>
           <div class="underline"></div>
           <div class="datos row">
-            <p class="col-6">Ataque: <span></span></p>
-            <p class="col-6">Defensa: <span></span></p>
-            <p class="col-6">Velocidad: <span></span></p>
-            <p class="col-6">Salud: <span></span></p>
+            <p class="col-6">Attack: <span id="pokeAttack"></span></p>
+            <p class="col-6">Deffense: <span id="pokeDeffense"></span></p>
+            <p class="col-6">Speed: <span id="pokeSpeed"></span></p>
+            <p class="col-6">Health: <span id="pokeHealth"></span></p>
           </div>
         </div>
         <div class="pokedex__info-card box-shadow">
-          <h3>Vista delantera y trasera</h3>
+          <h3>Front and Back View</h3>
           <div class="underline"></div>
+          <div class="row" style="margin-top: 15px;">
+            <img id="pokeFront" class="col-6"></img>
+            <img id="pokeBack" class="col-6"></img>
+          </div>
+        </div>
+        <div class="pokedex__info-card box-shadow">
           <div class="row">
-            <div id="poke-front" class="col-6"></div>
-            <div id="poke-back" class="col-6"></div>
+            <canvas class="col-12" id="pokeGraph"></canvas>
           </div>
-        </div>
-        <div class="pokedex__info-card box-shadow">
-          <h3>Gráfico</h3>
-          <div class="underline"></div>
-          <div id="poke-graph"></div>
         </div>
       </section>
     </main>
