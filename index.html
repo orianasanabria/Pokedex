@@ -9,38 +9,77 @@
   <meta name="author" content="Oriana Sanabria" />
   <meta name="description" content="PokeDex" />
   <meta name="keywords" content="pokemon" />
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- Bootstrap CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!-- Font Awesome -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
     rel="stylesheet">
+  <!-- Fonts Awesome -->
+  <script src="https://kit.fontawesome.com/f0c8e7e646.js" crossorigin="anonymous"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/main.css" />
   <title>PokeDex</title>
 </head>
 
 <body>
+  <div class="circle"></div>
   <div class="container">
-    <header>
-      
-    </header>
-    <main>
-      
+
+    <img class="logo" src="assets/img/poke-logo.png" alt="Pokemon Logo">
+
+    <section class="selection">
+      <div class="selection__content">
+        <h2 class="subtitle">Obtén todos los datos de tu Pokemon favorito</h2>
+        <select class="select mt-4 px-4" id="select-poke">
+          <option value="0">Selecciona un Pokemon</option>
+        </select>
+      </div>
+    </section>
+
+    <main class="pokedex" style="border: red 1px solid;">
+      <h1 id="poke-title" class="pokedex__title">Vista del Pokemon</h1>
+      <section class="pokedex__info">
+        <div class="pokedex__info-card box-shadow">
+          <h3>Datos del Pokemon</h3>
+          <div class="underline"></div>
+          <div class="datos row">
+            <p class="col-6">Pokedex: <span></span></p>
+            <p class="col-6">Tipo: <span></span></p>
+            <p class="col-6">Habilidad: <span></span></p>
+            <p class="col-6">Movimiento: <span></span></p>
+          </div>
+        </div>
+        <div class="pokedex__info-card box-shadow">
+          <h3>Estadísticas</h3>
+          <div class="underline"></div>
+          <div class="datos row">
+            <p class="col-6">Ataque: <span></span></p>
+            <p class="col-6">Defensa: <span></span></p>
+            <p class="col-6">Velocidad: <span></span></p>
+            <p class="col-6">Salud: <span></span></p>
+          </div>
+        </div>
+        <div class="pokedex__info-card box-shadow">
+          <h3>Vista delantera y trasera</h3>
+          <div class="underline"></div>
+          <div class="row">
+            <div id="poke-front" class="col-6"></div>
+            <div id="poke-back" class="col-6"></div>
+          </div>
+        </div>
+        <div class="pokedex__info-card box-shadow">
+          <h3>Gráfico</h3>
+          <div class="underline"></div>
+          <div id="poke-graph"></div>
+        </div>
+      </section>
     </main>
   </div>
-
-
-
-
-
-
-
-
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- Popper -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
     integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous">
