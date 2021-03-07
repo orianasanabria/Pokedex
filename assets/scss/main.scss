@@ -1,86 +1,194 @@
-/* Resets */
+  /* Resets */
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body,
+  div,
+  span,
+  object,
+  iframe,
+  figure,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  code,
+  em,
+  img,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  b,
+  u,
+  i,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  main,
+  canvas,
+  embed,
+  footer,
+  header,
+  nav,
+  section,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  footer,
+  header,
+  nav,
+  section,
+  main {
+    display: block;
+  }
+  
+  input {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  
+  :root {
+    --red:#f8424e;
+  }
 
-html,
-body,
-div,
-span,
-object,
-iframe,
-figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-code,
-em,
-img,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-b,
-u,
-i,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-main,
-canvas,
-embed,
-footer,
-header,
-nav,
-section,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-family: 'Poppins', sans-serif;
-}
+  .circle {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--red);
+    clip-path: circle(500px at top);
+    z-index: -10;
+  }
 
-footer,
-header,
-nav,
-section,
-main {
-  display: block;
-}
+  .container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  }
 
-input {
-  -webkit-appearance: none;
-  border-radius: 0;
-}
+  .logo {
+    margin-top: 100px;
+    width: 280px;
+  }
 
-:root {
-  --red:#f8424e;
-}
+  .selection {
+    margin-top: 50px;
+  
+    &__content {
+  
+      .subtitle {
+        color: white;
+        font-size: 2em;
+        font-weight: 800;
+        line-height: 1.3;
+      }
+  
+      .select {
+        width: 100%;
+        height: 3em;
+        border-radius: 100px;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+    }
+  }
+  
+  .pokedex {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  
+    &__title {
+      font-size: 1.8em;
+      font-weight: 800;
+      margin-top: 200px;
+    }
+  
+    &__info {
+      margin: 0 auto;
+      margin-top: 50px;
+      height: auto;
+      width: 100%;
+  
+      &-card {
+        height: 230px;
+        width: 100%;
+        padding: 30px;
+        margin-bottom: 30px;
+  
+        .datos {
+          margin-top: 45px;
+        }
+      }
+    }
+  }
+  
+  h3 {
+    font-weight: 600;
+  }
+  
+  p {
+    font-size: 0.850rem;
+    margin-bottom: 30px;
+  
+    span {
+      color: var(--red);
+      font-weight: 600;
+    }
+  }
+  
+  .box-shadow {
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #d9d9d9,
+      -20px -20px 60px #ffffff;
+  }
+  
+  .underline {
+    margin-top: 8px;
+    border: var(--red) solid 2px;
+    border-radius: 50px;
+    width: 35%;
+    float: left;
+  }
 
+
+@media (min-width: 760px) {
 /* Selection Section */
 
 .circle {
@@ -89,7 +197,6 @@ input {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--red);
   clip-path: circle(500px at left);
   z-index: -10;
 }
@@ -105,12 +212,12 @@ input {
   width: 250px;
   z-index: 1;
   position: absolute;
-  top: 70px;
+  top: -40px;
 }
 
 .selection {
   grid-column: 1;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-flow: wrap;
   align-content: center;
@@ -119,7 +226,6 @@ input {
 
     .subtitle {
       color: white;
-      font-size: 2em;
       font-weight: 800;
       line-height: 1.3;
     }
@@ -146,13 +252,13 @@ input {
     font-size: 1.8em;
     font-weight: 800;
     position: absolute;
-    top: 110px;
+    top: -100px;
     left: 80px;
   }
 
   &__info {
     margin: 0 auto;
-    margin-top: 170px;
+    margin-top: 120px;
     height: auto;
     width: 78%;
     display: grid;
@@ -166,6 +272,7 @@ input {
       height: 185px;
       width: 100%;
       padding: 30px;
+      margin-bottom: 0;
 
       .datos {
         margin-top: 35px;
@@ -187,18 +294,4 @@ p {
     font-weight: 600;
   }
 }
-
-.box-shadow {
-  border-radius: 20px;
-  background: #ffffff;
-  box-shadow: 20px 20px 60px #d9d9d9,
-    -20px -20px 60px #ffffff;
-}
-
-.underline {
-  margin-top: 8px;
-  border: var(--red) solid 2px;
-  border-radius: 50px;
-  width: 35%;
-  float: left;
 }
